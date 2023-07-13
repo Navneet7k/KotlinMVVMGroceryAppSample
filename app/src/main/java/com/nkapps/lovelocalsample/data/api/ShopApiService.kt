@@ -8,8 +8,4 @@ interface ShopApiService {
 
     @GET("/products")
     suspend fun getAllProducts() : Response<Shop>
-
-    @GET("products/{id}")
-    suspend fun getProduct(@Path(value = "id") itemId : Int) : Response<ShopItem>
-
 }

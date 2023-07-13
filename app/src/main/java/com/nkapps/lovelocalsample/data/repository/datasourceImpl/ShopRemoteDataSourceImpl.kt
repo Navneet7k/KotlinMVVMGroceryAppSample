@@ -12,8 +12,4 @@ class ShopRemoteDataSourceImpl @Inject constructor(
     override suspend fun getAllProducts(): Response<Shop> {
         return apiService.getAllProducts()
     }
-
-    override suspend fun getProduct(itemId: Int): Response<ShopItem> {
-        return apiService.getProduct(itemId)
-    }
 }

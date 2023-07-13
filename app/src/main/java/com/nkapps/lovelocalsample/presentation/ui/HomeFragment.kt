@@ -6,10 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
 import com.nkapps.lovelocalsample.R
+import com.nkapps.lovelocalsample.data.model.CartItem2
 import com.nkapps.lovelocalsample.data.util.Resource
+import com.nkapps.lovelocalsample.data.util.Utils
 import com.nkapps.lovelocalsample.databinding.FragmentHomeBinding
 import com.nkapps.lovelocalsample.presentation.adapter.HomeAdapter
 import com.nkapps.lovelocalsample.presentation.viewmodel.HomeViewModel
@@ -62,6 +66,13 @@ class HomeFragment : Fragment() {
         adapter.setOnItemClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(it)
             findNavController().navigate(action)
+        }
+
+        adapter.setOnAddToCartClickListener {shopItem->
+            val cartItem = CartItem2(shopItem.id,shopItem.image,
+                Utils.formatPrice(shopItem.price.toString()),shopItem.title,1,shopItem.price)
+            viewModel.saveToCart(cartItem)
+            Toast.makeText(context,"Added to Cart Successfully", Snackbar.LENGTH_SHORT).show()
         }
 
         binding.homeRecyclerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)

@@ -24,9 +24,14 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
     val differ = AsyncListDiffer(this,callback)
 
     private var onItemClickListener : ((ShopItem)-> Unit) = {}
+    private var onAddToCartClickListener : ((ShopItem)-> Unit) = {}
 
     fun setOnItemClickListener(listener : (ShopItem)-> Unit){
         onItemClickListener = listener
+    }
+
+    fun setOnAddToCartClickListener(listener : (ShopItem)-> Unit){
+        onAddToCartClickListener = listener
     }
 
     inner class HomeViewHolder(private val binding : SingleItemBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -44,6 +49,10 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
             binding.itemView.setOnClickListener {
                 onItemClickListener(shopItem)
+            }
+
+            binding.btnAdd.setOnClickListener {
+                onAddToCartClickListener(shopItem)
             }
 
         }

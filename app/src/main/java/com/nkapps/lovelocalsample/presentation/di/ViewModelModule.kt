@@ -27,8 +27,8 @@ class ViewModelModule {
 
     @Singleton
     @Provides
-    fun providesHomeViewModel(app : Application, productUseCase: ProductUseCase) : HomeViewModel{
-        return HomeViewModel(app, productUseCase)
+    fun providesHomeViewModel(app : Application, productUseCase: ProductUseCase,cartUseCase: CartUseCase) : HomeViewModel{
+        return HomeViewModel(app, productUseCase,cartUseCase)
     }
 
 }

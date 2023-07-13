@@ -21,7 +21,6 @@ class DatabaseModule {
     fun providesShopDatabase(app : Application,gson : Gson) : ShopDatabase{
         return Room.databaseBuilder(app,ShopDatabase::class.java,"shop_database")
             .fallbackToDestructiveMigration()
-            .addTypeConverter(Converters(gson))
             .build()
     }
 
