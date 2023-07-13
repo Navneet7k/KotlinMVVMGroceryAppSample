@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/product_detail_add_to_cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/product_detail_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/dm_sans_bold"
+                tools:text="5% OFF"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:background="@drawable/filled_rect"
+                app:layout_constraintStart_toStartOf="@+id/product_detail_image"
+                app:layout_constraintTop_toBottomOf="@+id/product_detail_image" />
+
+            <TextView
+                android:id="@+id/product_detail_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/dm_sans_bold"
+                tools:text="Tata Tea Gold (250gm) + Nestle Every Dairy Powder (100gm)"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/product_detail_price"
+                app:layout_constraintTop_toBottomOf="@+id/product_detail_price" />
+
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:textStyle="bold"
+                android:text="₹ 143"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/product_detail_title"
+                app:layout_constraintTop_toBottomOf="@+id/product_detail_title" />
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:gravity="bottom"
+                android:id="@+id/real_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="@string/_28"
+                android:textColor="@color/grey_one"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/product_detail_title"
+                app:layout_constraintStart_toEndOf="@+id/item_price" />
+
+            <TextView
+                android:id="@+id/common_stores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="Common Baniya Groceries >"
+                android:textColor="@color/purple_500"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/item_price"
+                app:layout_constraintTop_toBottomOf="@+id/item_price" />
+
+            <TextView
+                android:id="@+id/available_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="Available in:"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/common_stores"
+                app:layout_constraintTop_toBottomOf="@+id/common_stores" />
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:id="@+id/options_layout"
+                app:layout_constraintStart_toStartOf="@+id/available_options"
+                app:layout_constraintTop_toBottomOf="@+id/available_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_margin="5dp"
+                    android:padding="7dp"
+                    android:background="@drawable/rounded_corner_pink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:text="1 pack"
+                    android:textColor="@color/purple_500"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_margin="5dp"
+                    android:padding="7dp"
+                    android:background="@drawable/rounded_corner_pink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:text="3 pack"
+                    android:textColor="@color/purple_500"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_margin="5dp"
+                    android:padding="7dp"
+                    android:background="@drawable/rounded_corner_pink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:text="5 pack"
+                    android:textColor="@color/purple_500"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/pr_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="Product Details"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/available_options"
+                app:layout_constraintTop_toBottomOf="@+id/options_layout" />
+
+            <TextView
+                android:id="@+id/product_detail_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/dm_sans"
+                android:textSize="12sp"
+                tools:text="The speaker unit contains a diaphragm that is precision-grown from NAC Audio bio-cellulose, making it stiffer, lighter and stronger than regular PET speaker units, and allowing the sound-producing diaphragm to vibrate without the levels of distortion found in other speakers. \n\nThe speaker unit contains a diaphragm that is precision-grown from NAC Audio bio-cellulose, making it stiffer, lighter and stronger than regular PET speaker units, and allowing the sound-producing diaphragm to vibrate without the levels of distortion found in other speakers. "
+                android:textColor="@color/black_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/product_detail_title"
+                app:layout_constraintStart_toStartOf="@+id/item_price"
+                app:layout_constraintTop_toBottomOf="@+id/pr_details" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/product_detail_image"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/product1"
+                    android:scaleType="centerInside"
+                    android:layout_marginStart="-60dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.7" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.7" />
+                <!-- Overlaid image for item quantity -->
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/product2"
+                    app:layout_constraintBottom_toBottomOf="@+id/image1"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+                <ImageView
+                    android:id="@+id/imageQuantity"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/qty_250"
+                    app:layout_constraintEnd_toStartOf="@id/image2"
+                    app:layout_constraintStart_toStartOf="@id/image1"
+                    app:layout_constraintTop_toTopOf="@+id/guideline1"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageQuantity1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/qty_50"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginStart="-50dp"
+                    app:layout_constraintStart_toEndOf="@id/image2"
+                    app:layout_constraintBottom_toBottomOf="@+id/image2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:background="@drawable/button"
+        android:id="@+id/product_detail_add_to_cart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="ADD TO CART"
+        android:textStyle="bold"
+        android:fontFamily="@font/dm_sans_bold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
