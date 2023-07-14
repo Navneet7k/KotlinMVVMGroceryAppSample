@@ -10,7 +10,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/product_detail_add_to_cart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -111,7 +111,10 @@
                 android:orientation="horizontal">
                 <TextView
                     android:layout_margin="5dp"
-                    android:padding="7dp"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
                     android:background="@drawable/rounded_corner_pink"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -123,7 +126,10 @@
                     android:textStyle="bold" />
                 <TextView
                     android:layout_margin="5dp"
-                    android:padding="7dp"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
                     android:background="@drawable/rounded_corner_pink"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -135,7 +141,10 @@
                     android:textStyle="bold" />
                 <TextView
                     android:layout_margin="5dp"
-                    android:padding="7dp"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
                     android:background="@drawable/rounded_corner_pink"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -147,6 +156,23 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:background="@drawable/button"
+                android:id="@+id/product_detail_add_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="20dp"
+                android:text="ADD TO CART"
+                android:textStyle="bold"
+                android:fontFamily="@font/dm_sans_bold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/options_layout"
+                app:layout_constraintStart_toStartOf="@id/options_layout" />
 
             <TextView
                 android:id="@+id/pr_details"
@@ -159,7 +185,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/available_options"
-                app:layout_constraintTop_toBottomOf="@+id/options_layout" />
+                app:layout_constraintTop_toBottomOf="@+id/product_detail_add_to_cart" />
 
             <TextView
                 android:id="@+id/product_detail_description"
@@ -252,23 +278,23 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:background="@drawable/button"
-        android:id="@+id/product_detail_add_to_cart"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        android:text="ADD TO CART"
-        android:textStyle="bold"
-        android:fontFamily="@font/dm_sans_bold"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"-->
+<!--        android:background="@drawable/button"-->
+<!--        android:id="@+id/product_detail_add_to_cart"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_marginBottom="24dp"-->
+<!--        android:text="ADD TO CART"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily="@font/dm_sans_bold"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
